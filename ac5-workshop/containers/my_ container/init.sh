@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set +e
+pip install -r requirements.txt
+wget https://raw.githubusercontent.com/textualize/rich/refs/heads/master/examples/tree.py
+echo "alias rich='python3 tree.py $(pwd)'" >> /home/avd/.zshrc
+cp -r /home/avd/.ansible/collections/ansible
+_
+collections/arista/avd/examples/single-dc-l3ls/* .
